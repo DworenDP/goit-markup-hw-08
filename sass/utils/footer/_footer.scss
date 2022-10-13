@@ -5,17 +5,19 @@
     padding-bottom: 60px;
 
     &__wrapper {
-        display: flex;
-        align-items: baseline;
+        // display: flex;
+        // align-items: baseline;
+        text-align: center;
     }
 
     &__social {
-        margin: 0;
+        // margin: 0;
     }
 }
 
 .social-footer {
-    margin-left: 70px;
+    // margin-left: 70px;
+    margin-top: 60px;
 
     &__text {
         @include font(14px, 1.14, 0.03em);
@@ -41,15 +43,20 @@
 
     &__link {
         @include font(14px, 1.71, 0.03em);
+        display: block;
+
         font-style: normal;
 
         color: rgba(255, 255, 255, 0.6);
+
+        margin-top: 8px;
     }
 }
 
 .subscription {
     display: block;
-    margin-left: auto;
+    margin-top: 60px;
+    // margin-left: auto;
 
     &__form {
         display: block;
@@ -66,13 +73,15 @@
     }
 
     &__mail {
-        display: flex;
+        // display: flex;
         margin-top: 20px;
     }
 
     &__input {
         @include font(16px, 1.25, 0.03em);
         @include size(358px, 50px);
+
+        width: 100%;
 
         padding-left: 15px;
         margin-right: 12px;
@@ -89,6 +98,8 @@
     &__btn {
         @include font(16px, 1.88, 0.06em);
         @include size(200px, 50px);
+
+        margin-top: 20px;
 
         display: inline-flex;
 

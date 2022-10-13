@@ -81,8 +81,8 @@ textarea {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .section__title {
@@ -111,6 +111,8 @@ textarea {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #2196f3;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .logo__item {
   color: #000000;
@@ -567,12 +569,6 @@ textarea {
   background-color: #f5f4fa;
 }
 
-.teammate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
 .teammate__item {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -601,12 +597,15 @@ textarea {
   color: #757575;
   margin-bottom: 16px;
 }
+.teammate__item + .teammate__item {
+  margin-top: 30px;
+}
 
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 32px;
+  margin-left: 122px;
 }
 .social__ico {
   width: 44px;
@@ -642,12 +641,12 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 .clients__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -675,19 +674,10 @@ textarea {
   padding-bottom: 60px;
 }
 .footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  text-align: center;
 }
-.footer__social {
-  margin: 0;
-}
-
 .social-footer {
-  margin-left: 70px;
+  margin-top: 60px;
 }
 .social-footer__text {
   font-size: 14px;
@@ -713,13 +703,15 @@ textarea {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  display: block;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
 }
 
 .subscription {
   display: block;
-  margin-left: auto;
+  margin-top: 60px;
 }
 .subscription__form {
   display: block;
@@ -734,9 +726,6 @@ textarea {
   color: #ffffff;
 }
 .subscription__mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 20px;
 }
 .subscription__input {
@@ -745,6 +734,7 @@ textarea {
   letter-spacing: 0.03em;
   width: 358px;
   height: 50px;
+  width: 100%;
   padding-left: 15px;
   margin-right: 12px;
   font-weight: 400;
@@ -761,6 +751,7 @@ textarea {
   letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
+  margin-top: 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

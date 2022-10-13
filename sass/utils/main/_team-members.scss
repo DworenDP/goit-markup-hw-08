@@ -3,8 +3,8 @@
 }
 
 .teammate {
-    display: flex;
-    gap: 30px;
+    // display: flex;
+    // gap: 30px;
 
     &__item {
         background-color: $secondLogoColor;
@@ -15,6 +15,7 @@
     }
 
     &__card {
+        // width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -35,11 +36,15 @@
 
         margin-bottom: 16px;
     }
+
+    &__item + &__item {
+        margin-top: 30px;
+    }
 }
 
 .social {
     display: flex;
-    margin-left: 32px;
+    margin-left: 122px;
 
     &__ico {
         @include size(44px, 44px);
