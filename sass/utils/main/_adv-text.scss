@@ -1,0 +1,55 @@
+.section--padding-bottom-0 {
+    padding-bottom: 0;
+}
+
+.advertising {
+    display: flex;
+
+    &__title {
+        @include font(14px, 1.14, 0.03em);
+        font-weight: 700;
+        text-transform: uppercase;
+
+        color: $mainTextColor;
+
+        padding-bottom: 26px;
+    }
+
+    &__content {
+        @include font(14px, 1.71, 0.03em);
+
+        color: $secondTextColor;
+    }
+
+    &__wrap {
+        @include size(270px, 120px);
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        background-color: $portfolioButtonColor;
+        background-repeat: no-repeat;
+
+        margin-bottom: 30px;
+    }
+
+    &__list + &__list {
+        margin-left: 30px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    margin: -1px;
+}

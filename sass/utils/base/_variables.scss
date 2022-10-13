@@ -1,0 +1,38 @@
+// :root {
+//     --main-text-color: #212121;
+//     --second-text-color: #757575;
+//     --main-background-color: #f5f5f5;
+//     --second-background-color: #2f303a;
+//     --accent-color: #2196f3;
+//     --second-accent-color: #000000;
+//     --second-logo-color: #ffffff;
+//     --portfolio-button-color: #f5f4fa;
+//     --main-icon-color: #afb1b8;
+//     --big-btn-hover-color: #188ce8;
+//     --main-border-radius: 4px;
+//     --main-border-color: rgba(175, 177, 184, 1);
+//     --portfolio-wrap-color: rgba(33, 150, 243, 0.9);
+// }
+
+//Variables
+
+//main var
+$mainBackgroundColor: #f5f5f5;
+$mainIconColor: #afb1b8;
+$mainBorderColor: rgba(175, 177, 184, 1);
+$mainTextColor: #212121;
+$mainBoxShadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$mainTransition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$mainBorderRadius: 4px;
+
+//second var
+$secondTextColor: #757575;
+$secondBackgroundColor: #2f303a;
+$secondAccentColor: #000000;
+$secondLogoColor: #ffffff;
+
+//other var
+$accentColor: #2196f3;
+$portfolioButtonColor: #f5f4fa;
+$bigBtnHoverColor: #188ce8;
+$portfolioWrapColor: rgba(33, 150, 243, 0.9);

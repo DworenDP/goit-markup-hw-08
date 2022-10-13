@@ -1,0 +1,39 @@
+.btn-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &__item + &__item {
+        margin-left: 8px;
+    }
+
+    &__button {
+        @include font(16px, 1.62, 0.03em);
+
+        font-weight: 500;
+        text-align: center;
+
+        color: $mainTextColor;
+        background-color: $portfolioButtonColor;
+
+        cursor: pointer;
+        border-radius: $mainBorderRadius;
+        border: none;
+        padding-top: 6px;
+        padding-right: 22px;
+        padding-bottom: 6px;
+        padding-left: 22px;
+
+        transition: background-color $mainTransition, color $mainTransition;
+    }
+
+    &__button:hover,
+    &__button:focus,
+    &__button:active {
+        color: $secondLogoColor;
+        background-color: $accentColor;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: $mainBorderRadius;
+    }
+}

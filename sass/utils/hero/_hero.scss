@@ -1,0 +1,53 @@
+.hero {
+    background-color: $secondBackgroundColor;
+
+    padding: 200px 0;
+
+    background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        @include font(44px, 1.36, 0.06em);
+        font-weight: 900;
+        text-align: center;
+
+        text-transform: uppercase;
+
+        color: $secondLogoColor;
+
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 696px;
+    }
+
+    &__btn {
+        @include font(16px, 1.88, 0.06em);
+        font-family: inherit;
+        background-color: $accentColor;
+        font-weight: 700;
+        text-align: center;
+
+        color: $secondLogoColor;
+
+        display: block;
+        margin: 0 auto;
+        padding: 10px 32px;
+        border-radius: $mainBorderRadius;
+        border: none;
+        cursor: pointer;
+        box-shadow: $mainBoxShadow;
+
+        transition: background-color $mainTransition;
+    }
+
+    &__btn:hover,
+    &__btn:focus,
+    &__btn:active {
+        background-color: $bigBtnHoverColor;
+    }
+}

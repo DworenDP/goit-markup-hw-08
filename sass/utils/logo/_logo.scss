@@ -1,0 +1,15 @@
+.logo {
+    @include font(26px, 1.19, 0.03em);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+
+    color: $accentColor;
+
+    &__item {
+        color: $secondAccentColor;
+    }
+
+    &__item--inverse {
+        color: $secondLogoColor;
+    }
+}

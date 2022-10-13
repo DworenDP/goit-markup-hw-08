@@ -1,0 +1,46 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    &__box {
+        display: flex;
+        margin-left: 93px;
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__item + &__item {
+        margin-left: 50px;
+    }
+
+    &__link {
+        @include font(14px, 1.15, 0.02em);
+
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        color: $mainTextColor;
+
+        font-weight: 500;
+    }
+}
+
+.navigation__link--active {
+    position: relative;
+    color: $accentColor;
+
+    &::after {
+        content: '';
+        @include size(100%, 4px);
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        background: $accentColor;
+        border-radius: 2px;
+    }
+}
