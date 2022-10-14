@@ -7,6 +7,10 @@
         margin-left: 93px;
     }
 
+    &__box--hidden {
+        display: none;
+    }
+
     &__item {
         display: block;
     }

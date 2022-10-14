@@ -85,6 +85,12 @@ textarea {
   padding-bottom: 30px;
 }
 
+.section--hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 .section__title {
   font-weight: 700;
   font-size: 28px;
@@ -147,6 +153,9 @@ textarea {
   display: flex;
   margin-left: 93px;
 }
+.navigation__box--hidden {
+  display: none;
+}
 .navigation__item {
   display: block;
 }
@@ -184,6 +193,9 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+}
+.contacts--hidden {
+  display: none;
 }
 .contacts__item {
   display: block;

@@ -57,6 +57,12 @@ textarea {
     padding-bottom: 30px;
 }
 
+.section--hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
 .section__title {
     font-weight: 700;
     font-size: 28px;

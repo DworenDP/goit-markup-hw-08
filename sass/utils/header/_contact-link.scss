@@ -2,6 +2,10 @@
     display: flex;
     margin-left: auto;
 
+    &--hidden {
+        display: none;
+    }
+
     &__item {
         display: block;
     }
