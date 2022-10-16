@@ -391,8 +391,8 @@ textarea {
           transform: translate(-50%, -50%) scale(1);
   scale: 1;
   z-index: 99;
-  min-width: 530px;
-  min-height: 580px;
+  min-width: 450px;
+  min-height: 610px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -532,14 +532,14 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 14px;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
 .submit__link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -565,6 +565,18 @@ textarea {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 530px;
+    min-height: 580px;
+  }
+  .submit__item,
+.submit__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 .submit input:checked + label .submit__checkbox {
   background: #2196f3;
   border: none;
