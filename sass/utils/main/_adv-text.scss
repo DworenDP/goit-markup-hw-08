@@ -1,43 +1,56 @@
 .advertising {
-    &__list {
-        display: block;
-        margin-bottom: 30px;
+    @include mobile {
+        &__list {
+            display: block;
+            margin-bottom: 30px;
+        }
+        &__title {
+            @include font(14px, 1.14, 0.03em);
+
+            text-align: center;
+
+            font-weight: 700;
+            text-transform: uppercase;
+
+            color: $mainTextColor;
+
+            padding-bottom: 26px;
+        }
+
+        &__content {
+            @include font(14px, 1.71, 0.03em);
+
+            color: $secondTextColor;
+        }
+
+        &__wrap {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            height: 120px;
+
+            background-color: $portfolioButtonColor;
+            background-repeat: no-repeat;
+
+            margin-bottom: 30px;
+        }
     }
-    &__title {
-        @include font(14px, 1.14, 0.03em);
 
-        text-align: center;
-
-        font-weight: 700;
-        text-transform: uppercase;
-
-        color: $mainTextColor;
-
-        padding-bottom: 26px;
-    }
-
-    &__content {
-        @include font(14px, 1.71, 0.03em);
-
-        color: $secondTextColor;
-    }
-
-    &__wrap {
+    @include tablet {
         display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
 
-        justify-content: center;
-        align-items: center;
-
-        height: 120px;
-
-        background-color: $portfolioButtonColor;
-        background-repeat: no-repeat;
-
-        margin-bottom: 30px;
+        &__list {
+            flex-basis: calc(100% / 2 - 30px);
+        }
     }
 
     @include desktop {
         display: flex;
+        flex-wrap: nowrap;
         &__wrap {
             @include size(270px, 120px);
         }

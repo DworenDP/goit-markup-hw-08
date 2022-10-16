@@ -59,7 +59,7 @@
 
 .social {
     display: flex;
-    margin-left: 32px;
+    margin-left: 122px;
 
     &__ico {
         @include size(44px, 44px);
@@ -91,5 +91,13 @@
 
     &__item + &__item {
         margin-left: 10px;
+    }
+
+    @include tablet {
+        margin-left: 74px;
+    }
+
+    @include desktop {
+        margin-left: 32px;
     }
 }

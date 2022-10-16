@@ -1,19 +1,21 @@
 .logo {
-    @include font(24px, 1.17, 0.03em);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    @include mobile {
+        @include font(24px, 1.17, 0.03em);
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
 
-    color: $accentColor;
+        color: $accentColor;
 
-    padding-top: 16px;
-    padding-bottom: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
 
-    &__item {
-        color: $secondAccentColor;
-    }
+        &__item {
+            color: $secondAccentColor;
+        }
 
-    &__item--inverse {
-        color: $secondLogoColor;
+        &__item--inverse {
+            color: $secondLogoColor;
+        }
     }
 
     @include desktop {

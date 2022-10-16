@@ -1,8 +1,10 @@
 .contacts {
-    display: none;
+    @include mobile {
+        display: none;
 
-    &__link:hover svg {
-        fill: $accentColor;
+        &__link:hover svg {
+            fill: $accentColor;
+        }
     }
 
     @include tablet {
