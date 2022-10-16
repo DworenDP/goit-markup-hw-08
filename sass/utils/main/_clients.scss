@@ -1,9 +1,14 @@
 .clients {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        flex-basis: calc(100% / 2 - 30px);
+    }
 
     &__link {
-        @include size(170px, 92px);
+        @include size(210px, 92px);
 
         display: flex;
 
@@ -23,5 +28,25 @@
     &__link:focus {
         fill: $accentColor;
         border: 1px solid $accentColor;
+    }
+
+    @include tablet {
+        &__item {
+            flex-basis: calc(100% / 3 - 30px);
+        }
+
+        &__link {
+            @include size(226px, 92px);
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        &__link {
+            @include size(170px, 92px);
+        }
     }
 }
