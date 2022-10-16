@@ -91,12 +91,6 @@ textarea {
   }
 }
 
-.section--hidden {
-  opacity: 0;
-  visibility: hidden;
-  display: none;
-}
-
 .section__title {
   font-weight: 700;
   font-size: 28px;
@@ -105,6 +99,15 @@ textarea {
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 30px;
+}
+
+.section__title--hidden {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .section__title--hidden {
+    display: block;
+  }
 }
 
 .link {

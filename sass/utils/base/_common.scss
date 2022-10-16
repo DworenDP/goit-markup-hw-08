@@ -61,12 +61,6 @@ textarea {
     }
 }
 
-.section--hidden {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-}
-
 .section__title {
     font-weight: 700;
     font-size: 28px;
@@ -77,6 +71,14 @@ textarea {
     color: $mainTextColor;
 
     margin-bottom: 30px;
+}
+
+.section__title--hidden {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 }
 
 .link {
