@@ -1,22 +1,19 @@
-// .section--padding-bottom-0 {
-//     padding-bottom: 0;
-// }
-
 .advertising {
-    // display: flex;
-    width: 100%;
-
+    &__list {
+        display: block;
+        margin-bottom: 30px;
+    }
     &__title {
         @include font(14px, 1.14, 0.03em);
 
-        display: flex;
-        justify-content: center;
+        text-align: center;
+
         font-weight: 700;
         text-transform: uppercase;
 
         color: $mainTextColor;
 
-        padding-bottom: 10px;
+        padding-bottom: 26px;
     }
 
     &__content {
@@ -26,12 +23,12 @@
     }
 
     &__wrap {
-        @include size(100%, 120px);
-
         display: flex;
 
         justify-content: center;
         align-items: center;
+
+        height: 120px;
 
         background-color: $portfolioButtonColor;
         background-repeat: no-repeat;
@@ -39,9 +36,27 @@
         margin-bottom: 30px;
     }
 
-    // &__list + &__list {
-    //     margin-left: 30px;
-    // }
+    @include desktop {
+        display: flex;
+        &__wrap {
+            @include size(270px, 120px);
+        }
+
+        &__list + &__list {
+            margin-left: 30px;
+        }
+
+        &__list {
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include desktop {
+    .section--padding-bottom-0 {
+        padding-bottom: 0;
+    }
 }
 
 .visually-hidden {

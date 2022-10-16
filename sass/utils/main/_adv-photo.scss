@@ -1,33 +1,37 @@
 .adv-photo {
-    display: flex;
-    gap: 30px;
+    display: none;
 
-    &__item {
-        flex-basis: calc(100% / 3 - 30px);
-        position: relative;
-    }
-
-    &__box {
-        @include size(370px, 70px);
-
+    @include desktop {
         display: flex;
-        position: absolute;
+        gap: 30px;
 
-        background: rgba(47, 48, 58, 0.8);
+        &__item {
+            flex-basis: calc(100% / 3 - 30px);
+            position: relative;
+        }
 
-        bottom: 0;
-        left: 0;
+        &__box {
+            @include size(370px, 70px);
 
-        justify-content: center;
-        align-items: center;
-    }
+            display: flex;
+            position: absolute;
 
-    &__text {
-        @include font(14px, 1.14, 0.03em);
-        font-weight: 700;
+            background: rgba(47, 48, 58, 0.8);
 
-        text-transform: uppercase;
+            bottom: 0;
+            left: 0;
 
-        color: $secondLogoColor;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__text {
+            @include font(14px, 1.14, 0.03em);
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            color: $secondLogoColor;
+        }
     }
 }
