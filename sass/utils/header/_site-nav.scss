@@ -1,34 +1,36 @@
 .navigation {
-    display: flex;
-    align-items: center;
-
     &__box {
-        display: flex;
-        margin-left: 93px;
-    }
-
-    &__box--hidden {
         display: none;
     }
 
-    &__item {
-        display: block;
-    }
+    @include tablet {
+        display: flex;
+        align-items: center;
 
-    &__item + &__item {
-        margin-left: 50px;
-    }
+        &__box {
+            display: flex;
+            margin-left: 93px;
+        }
 
-    &__link {
-        @include font(14px, 1.15, 0.02em);
+        &__item {
+            display: block;
+        }
 
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        &__item + &__item {
+            margin-left: 50px;
+        }
 
-        color: $mainTextColor;
+        &__link {
+            @include font(14px, 1.15, 0.02em);
 
-        font-weight: 500;
+            display: block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            color: $mainTextColor;
+
+            font-weight: 500;
+        }
     }
 }
 

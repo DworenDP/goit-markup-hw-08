@@ -1,35 +1,65 @@
 .contacts {
-    display: flex;
-    margin-left: auto;
+    display: none;
 
-    &--hidden {
-        display: none;
-    }
-
-    &__item {
+    @include tablet {
         display: block;
+        margin-left: auto;
+
+        &__item {
+            display: block;
+        }
+
+        &__icon {
+            margin-right: 10px;
+            fill: currentColor;
+        }
+        contacts__item + contacts__item {
+            padding-bottom: 10px;
+        }
+
+        &__link {
+            @include font(14px, 1.15, 0.02em);
+
+            display: flex;
+            align-items: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            color: $secondTextColor;
+
+            font-weight: 500;
+        }
     }
 
-    &__icon {
-        margin-right: 10px;
-        fill: currentColor;
-    }
-
-    &__link {
-        @include font(14px, 1.15, 0.02em);
-
+    @include desktop {
         display: flex;
-        align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        margin-left: auto;
 
-        color: $secondTextColor;
+        &__item {
+            display: block;
+        }
 
-        font-weight: 500;
-    }
+        &__icon {
+            margin-right: 10px;
+            fill: currentColor;
+        }
 
-    &__item + &__item {
-        margin-left: 50px;
+        &__link {
+            @include font(14px, 1.15, 0.02em);
+
+            display: flex;
+            align-items: center;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            color: $secondTextColor;
+
+            font-weight: 500;
+        }
+
+        &__item + &__item {
+            margin-left: 50px;
+        }
     }
 }
 
