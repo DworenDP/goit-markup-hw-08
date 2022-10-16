@@ -1,33 +1,35 @@
 .clients {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-
-    &__item {
-        flex-basis: calc(100% / 2 - 30px);
-    }
-
-    &__link {
-        @include size(210px, 92px);
-
+    @include mobile {
         display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
 
-        fill: $mainIconColor;
+        &__item {
+            flex-basis: calc(100% / 2 - 30px);
+        }
 
-        border-radius: $mainBorderRadius;
-        border: 1px solid rgba(175, 177, 184, 1);
+        &__link {
+            @include size(210px, 92px);
 
-        justify-content: center;
-        align-items: center;
+            display: flex;
 
-        transition: fill $mainTransition;
-    }
+            fill: $mainIconColor;
 
-    &__link:hover,
-    &__link:active,
-    &__link:focus {
-        fill: $accentColor;
-        border: 1px solid $accentColor;
+            border-radius: $mainBorderRadius;
+            border: 1px solid rgba(175, 177, 184, 1);
+
+            justify-content: center;
+            align-items: center;
+
+            transition: fill $mainTransition;
+        }
+
+        &__link:hover,
+        &__link:active,
+        &__link:focus {
+            fill: $accentColor;
+            border: 1px solid $accentColor;
+        }
     }
 
     @include tablet {

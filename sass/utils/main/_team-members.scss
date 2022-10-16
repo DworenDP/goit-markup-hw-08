@@ -3,37 +3,39 @@
 }
 
 .teammate {
-    &__item {
-        background-color: $secondLogoColor;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-            0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
-    }
+    @include mobile {
+        &__item {
+            background-color: $secondLogoColor;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
+        }
 
-    &__item + &__item {
-        margin-top: 30px;
-    }
+        &__item + &__item {
+            margin-top: 30px;
+        }
 
-    &__card {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+        &__card {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
 
-    &__name {
-        @include font(16px, 1.19, 0.03em);
-        font-weight: 500;
-        text-align: center;
+        &__name {
+            @include font(16px, 1.19, 0.03em);
+            font-weight: 500;
+            text-align: center;
 
-        margin-bottom: 10px;
-    }
+            margin-bottom: 10px;
+        }
 
-    &__profession {
-        @include font(16px, 1.19, 0.03em);
-        text-align: center;
+        &__profession {
+            @include font(16px, 1.19, 0.03em);
+            text-align: center;
 
-        color: $secondTextColor;
+            color: $secondTextColor;
 
-        margin-bottom: 16px;
+            margin-bottom: 16px;
+        }
     }
 
     @include tablet {
@@ -58,39 +60,41 @@
 }
 
 .social {
-    display: flex;
-    margin-left: 122px;
-
-    &__ico {
-        @include size(44px, 44px);
-
+    @include mobile {
         display: flex;
+        margin-left: 122px;
 
-        border-radius: 50%;
+        &__ico {
+            @include size(44px, 44px);
 
-        background: $secondLogoColor;
-        fill: $mainIconColor;
+            display: flex;
 
-        justify-content: center;
-        align-items: center;
+            border-radius: 50%;
 
-        transition: background $mainTransition, fill $mainTransition;
-    }
+            background: $secondLogoColor;
+            fill: $mainIconColor;
 
-    &__ico--repainted {
-        background: rgba(255, 255, 255, 0.1);
-        fill: $secondLogoColor;
-    }
+            justify-content: center;
+            align-items: center;
 
-    &__ico:hover,
-    &__ico:active,
-    &__ico:focus {
-        fill: $secondLogoColor;
-        background: $accentColor;
-    }
+            transition: background $mainTransition, fill $mainTransition;
+        }
 
-    &__item + &__item {
-        margin-left: 10px;
+        &__ico--repainted {
+            background: rgba(255, 255, 255, 0.1);
+            fill: $secondLogoColor;
+        }
+
+        &__ico:hover,
+        &__ico:active,
+        &__ico:focus {
+            fill: $secondLogoColor;
+            background: $accentColor;
+        }
+
+        &__item + &__item {
+            margin-left: 10px;
+        }
     }
 
     @include tablet {

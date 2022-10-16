@@ -1,31 +1,39 @@
 .footer {
-    background-color: $secondBackgroundColor;
+    @include mobile {
+        background-color: $secondBackgroundColor;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    &__wrapper {
-        display: flex;
-        align-items: baseline;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
-    &__social {
-        margin: 0;
+    @include desktop {
+        &__wrapper {
+            display: flex;
+            align-items: baseline;
+        }
+
+        &__social {
+            margin: 0;
+        }
     }
 }
 
 .social-footer {
-    margin-left: 70px;
+    @include mobile {
+        &__text {
+            @include font(14px, 1.14, 0.03em);
 
-    &__text {
-        @include font(14px, 1.14, 0.03em);
+            margin-bottom: 20px;
 
-        margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
 
-        font-weight: 700;
-        text-transform: uppercase;
+            color: $secondLogoColor;
+        }
+    }
 
-        color: $secondLogoColor;
+    @include desktop {
+        margin-left: 70px;
     }
 }
 

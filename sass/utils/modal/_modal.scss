@@ -22,89 +22,101 @@
 }
 
 .modal {
-    position: absolute;
-    padding: 40px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    scale: 1;
-    z-index: 99;
-
-    min-width: 450px;
-    min-height: 610px;
-
-    background-color: $secondLogoColor;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: $mainBorderRadius;
-
-    transition: transform $mainTransition;
-
-    &__close-btn {
-        @include size(30px, 30px);
-
+    @include mobile {
         position: absolute;
-        top: 8px;
-        right: 8px;
-
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-
-        background-color: $secondLogoColor;
-    }
-
-    &__close-img {
-        position: absolute;
+        padding: 40px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        fill: $mainTextColor;
-        transition: fill $mainTransition;
-    }
+        transform: translate(-50%, -50%) scale(1);
+        scale: 1;
+        z-index: 99;
 
-    &__close-btn:hover svg,
-    &__close-btn:focus svg {
-        fill: $accentColor;
-    }
+        min-width: 450px;
+        min-height: 610px;
 
-    &__title {
-        @include font(20px, 1.15, 0.03em);
-
-        text-align: center;
-        margin-bottom: 12px;
-
-        font-weight: 700;
-
-        color: $mainTextColor;
-    }
-
-    &__submit {
-        @include font(16px, 2.38, 0.06em);
-
-        display: block;
-
-        padding: 10px 52px;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-
-        font-weight: 700;
-
-        border: none;
-        cursor: pointer;
-        color: $secondLogoColor;
-        background-color: $accentColor;
+        background-color: $secondLogoColor;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: $mainBorderRadius;
 
-        transition: box-shadow $mainTransition, background-color $mainTransition;
+        transition: transform $mainTransition;
+
+        &__close-btn {
+            @include size(30px, 30px);
+
+            position: absolute;
+            top: 8px;
+            right: 8px;
+
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+
+            background-color: $secondLogoColor;
+        }
+
+        &__close-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            fill: $mainTextColor;
+            transition: fill $mainTransition;
+        }
+
+        &__close-btn:hover svg,
+        &__close-btn:focus svg {
+            fill: $accentColor;
+        }
+
+        &__title {
+            @include font(20px, 1.5, 0.03em);
+
+            text-align: center;
+            margin-bottom: 12px;
+
+            font-weight: 700;
+
+            color: $mainTextColor;
+        }
+
+        &__submit {
+            @include font(16px, 2.38, 0.06em);
+
+            display: block;
+
+            padding: 10px 52px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+
+            font-weight: 700;
+
+            border: none;
+            cursor: pointer;
+            color: $secondLogoColor;
+            background-color: $accentColor;
+            border-radius: $mainBorderRadius;
+
+            transition: box-shadow $mainTransition,
+                background-color $mainTransition;
+        }
+
+        &__submit:hover,
+        &__submit:focus,
+        &__submit:active {
+            box-shadow: $mainBoxShadow;
+            background-color: $bigBtnHoverColor;
+        }
     }
 
-    &__submit:hover,
-    &__submit:focus,
-    &__submit:active {
-        box-shadow: $mainBoxShadow;
-        background-color: $bigBtnHoverColor;
+    @include desktop {
+        min-width: 530px;
+        min-height: 580px;
+
+        &__title {
+            @include font(20px, 1.15, 0.03em);
+        }
     }
 }
 
@@ -209,10 +221,6 @@
 }
 
 @include desktop {
-    .modal {
-        min-width: 530px;
-        min-height: 580px;
-    }
     .submit__item,
     .submit__link {
         @include font(14px, 1.71, 0.03em);
