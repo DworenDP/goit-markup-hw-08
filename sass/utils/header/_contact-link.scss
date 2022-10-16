@@ -1,6 +1,10 @@
 .contacts {
     display: none;
 
+    &__link:hover svg {
+        fill: $accentColor;
+    }
+
     @include tablet {
         display: block;
         margin-left: auto;
@@ -12,9 +16,6 @@
         &__icon {
             margin-right: 10px;
             fill: currentColor;
-        }
-        contacts__item + contacts__item {
-            padding-bottom: 10px;
         }
 
         &__link {
@@ -33,36 +34,14 @@
 
     @include desktop {
         display: flex;
-        margin-left: auto;
-
-        &__item {
-            display: block;
-        }
-
-        &__icon {
-            margin-right: 10px;
-            fill: currentColor;
-        }
 
         &__link {
-            @include font(14px, 1.15, 0.02em);
-
-            display: flex;
-            align-items: center;
             padding-top: 32px;
             padding-bottom: 32px;
-
-            color: $secondTextColor;
-
-            font-weight: 500;
         }
 
         &__item + &__item {
             margin-left: 50px;
         }
     }
-}
-
-.contacts__link:hover svg {
-    fill: $accentColor;
 }
