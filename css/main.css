@@ -74,10 +74,20 @@ textarea {
 }
 
 .container {
-  max-width: 1200px;
+  width: 480px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -99,6 +109,12 @@ textarea {
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .section__title--hidden {
@@ -631,6 +647,9 @@ textarea {
     display: block;
     margin-bottom: 0;
   }
+  .advertising__title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -703,8 +722,9 @@ textarea {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  -ms-flex-preferred-size: calc(25% - 30px);
-      flex-basis: calc(25% - 30px);
+}
+.teammate__item + .teammate__item {
+  margin-top: 30px;
 }
 .teammate__card {
   padding-top: 30px;
@@ -726,15 +746,35 @@ textarea {
   color: #757575;
   margin-bottom: 16px;
 }
-.teammate__item + .teammate__item {
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .teammate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .teammate__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+  }
+  .teammate__item + .teammate__item {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teammate__item {
+    -ms-flex-preferred-size: calc(25% - 30px);
+        flex-basis: calc(25% - 30px);
+  }
 }
 
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 122px;
+  margin-left: 32px;
 }
 .social__ico {
   width: 44px;
@@ -770,12 +810,12 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .clients__link {
-  width: 210px;
+  width: 170px;
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,10 +843,19 @@ textarea {
   padding-bottom: 60px;
 }
 .footer__wrapper {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
+.footer__social {
+  margin: 0;
+}
+
 .social-footer {
-  margin-top: 60px;
+  margin-left: 70px;
 }
 .social-footer__text {
   font-size: 14px;
@@ -832,15 +881,13 @@ textarea {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  display: block;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 8px;
 }
 
 .subscription {
   display: block;
-  margin-top: 60px;
+  margin-left: auto;
 }
 .subscription__form {
   display: block;
@@ -855,6 +902,9 @@ textarea {
   color: #ffffff;
 }
 .subscription__mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 20px;
 }
 .subscription__input {
@@ -863,7 +913,6 @@ textarea {
   letter-spacing: 0.03em;
   width: 358px;
   height: 50px;
-  width: 100%;
   padding-left: 15px;
   margin-right: 12px;
   font-weight: 400;
@@ -880,7 +929,6 @@ textarea {
   letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
-  margin-top: 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
