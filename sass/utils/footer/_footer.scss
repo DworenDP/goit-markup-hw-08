@@ -7,6 +7,22 @@
 
         &__social {
             margin: 0;
+            justify-content: center;
+        }
+
+        &__logo {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @include tablet {
+        &__info {
+            margin-left: 60px;
+        }
+
+        &__logo {
+            padding-top: 0;
         }
     }
 
@@ -22,6 +38,7 @@
     @include mobile {
         text-align: center;
         margin-top: 60px;
+
         &__text {
             @include font(14px, 1.14, 0.03em);
 
@@ -34,7 +51,13 @@
         }
     }
 
+    @include tablet {
+        margin-top: 0;
+        margin-right: 74px;
+    }
+
     @include desktop {
+        text-align: left;
         margin-left: 70px;
     }
 }
@@ -60,7 +83,7 @@
         }
     }
     @include desktop {
-        text-align: start;
+        text-align: left;
 
         &__geo {
             @include font(14px, 1.71, 0.03em);
@@ -81,7 +104,8 @@
 .subscription {
     @include mobile {
         display: block;
-        margin-left: auto;
+
+        margin-top: 60px;
 
         &__form {
             display: block;
@@ -90,6 +114,9 @@
 
         &__label {
             @include font(14px, 1.14, 0.03em);
+
+            margin-left: 137px;
+
             font-weight: 700;
 
             text-transform: uppercase;
@@ -158,9 +185,13 @@
         }
     }
 
+    @include tablet {
+        margin-left: 150px;
+    }
+
     @include desktop {
         display: block;
-        margin-left: auto;
+        margin-left: 93px;
 
         &__form {
             display: block;
@@ -205,6 +236,9 @@
 
             font-weight: 700;
 
+            margin-top: 0;
+            margin-left: 12px;
+
             align-items: center;
             justify-content: center;
 
@@ -217,5 +251,22 @@
 
             transition: background-color $mainTransition;
         }
+    }
+}
+
+.footer__wrapper--tablet {
+    @include mobile {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        justify-content: baseline;
     }
 }
