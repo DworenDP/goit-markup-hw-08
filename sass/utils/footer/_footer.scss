@@ -23,10 +23,6 @@
     }
 
     @include tablet {
-        &__info {
-            margin-left: 60px;
-        }
-
         &__logo {
             padding-top: 0;
         }
@@ -67,7 +63,6 @@
 
     @include tablet {
         margin-top: 0;
-        margin-right: 74px;
     }
 
     @include desktop {
@@ -236,16 +231,15 @@
     }
 }
 
-.footer__wrapper--tablet {
+.footer__box {
     @include base {
         display: flex;
-
         flex-direction: column;
     }
 
     @include tablet {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     @include tablet {
