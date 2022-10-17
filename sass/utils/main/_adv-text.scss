@@ -1,5 +1,5 @@
 .advertising {
-    @include mobile {
+    @include base {
         &__list {
             display: block;
             margin-bottom: 30px;

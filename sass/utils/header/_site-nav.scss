@@ -1,8 +1,6 @@
 .navigation {
-    @include mobile {
-        &__box {
-            display: none;
-        }
+    &__box {
+        display: none;
     }
 
     @include tablet {

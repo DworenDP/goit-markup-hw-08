@@ -3,7 +3,7 @@
 }
 
 .teammate {
-    @include mobile {
+    @include base {
         &__item {
             background-color: $secondLogoColor;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -60,9 +60,9 @@
 }
 
 .social {
-    @include mobile {
+    @include base {
         display: flex;
-        margin-left: 122px;
+        margin-left: 42px;
 
         &__ico {
             @include size(44px, 44px);
@@ -95,6 +95,10 @@
         &__item + &__item {
             margin-left: 10px;
         }
+    }
+
+    @include mobile {
+        margin-left: 122px;
     }
 
     @include tablet {

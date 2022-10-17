@@ -1,12 +1,9 @@
 .clients {
-    @include mobile {
+    @include base {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
-
-        &__item {
-            flex-basis: calc(100% / 2 - 30px);
-        }
 
         &__link {
             @include size(210px, 92px);
@@ -29,6 +26,15 @@
         &__link:focus {
             fill: $accentColor;
             border: 1px solid $accentColor;
+        }
+    }
+
+    @include mobile {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__item {
+            flex-basis: calc(100% / 2 - 30px);
         }
     }
 

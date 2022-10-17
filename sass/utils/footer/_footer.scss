@@ -1,5 +1,5 @@
 .footer {
-    @include mobile {
+    @include base {
         background-color: $secondBackgroundColor;
 
         padding-top: 60px;
@@ -35,7 +35,7 @@
 }
 
 .social-footer {
-    @include mobile {
+    @include base {
         text-align: center;
         margin-top: 60px;
 
@@ -63,7 +63,7 @@
 }
 
 .address {
-    @include mobile {
+    @include base {
         margin-top: 20px;
 
         text-align: center;
@@ -102,7 +102,7 @@
 }
 
 .subscription {
-    @include mobile {
+    @include base {
         display: block;
 
         margin-top: 60px;
@@ -115,7 +115,7 @@
         &__label {
             @include font(14px, 1.14, 0.03em);
 
-            margin-left: 137px;
+            margin-left: 41px;
 
             font-weight: 700;
 
@@ -130,7 +130,7 @@
 
         &__input {
             @include font(16px, 1.25, 0.03em);
-            @include size(450px, 50px);
+            @include size(290px, 50px);
 
             padding-left: 15px;
             margin-right: 12px;
@@ -156,7 +156,7 @@
             justify-content: center;
 
             margin-top: 20px;
-            margin-left: 140px;
+            margin-left: 45px;
 
             border: none;
             cursor: pointer;
@@ -185,13 +185,27 @@
         }
     }
 
+    @include mobile {
+        &__label {
+            margin-left: 137px;
+        }
+
+        &__input {
+            @include size(450px, 50px);
+        }
+
+        &__btn {
+            margin-left: 140px;
+        }
+    }
+
     @include tablet {
         margin-left: 150px;
     }
 
     @include desktop {
         display: block;
-        margin-left: 93px;
+        margin-left: auto;
 
         &__form {
             display: block;
