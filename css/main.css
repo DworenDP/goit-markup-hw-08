@@ -1240,6 +1240,7 @@ textarea {
   }
   .btn-box__item + .btn-box__item {
     margin-left: 8px;
+    margin-bottom: 7px;
   }
   .btn-box__button {
     font-size: 16px;
@@ -1371,10 +1372,16 @@ textarea {
     -ms-flex-preferred-size: calc(50% - 30px);
         flex-basis: calc(50% - 30px);
   }
+  .portfolio-card__box--techno {
+    padding-bottom: 56px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-card__item {
     -ms-flex-preferred-size: calc(33.3333333333% - 30px);
         flex-basis: calc(33.3333333333% - 30px);
+  }
+  .portfolio-card__box--techno {
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

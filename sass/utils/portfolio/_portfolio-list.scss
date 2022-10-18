@@ -76,11 +76,19 @@
         &__item {
             flex-basis: calc(100% / 2 - 30px);
         }
+
+        &__box--techno {
+            padding-bottom: 56px;
+        }
     }
 
     @include desktop {
         &__item {
             flex-basis: calc(100% / 3 - 30px);
+        }
+
+        &__box--techno {
+            padding-bottom: 20px;
         }
     }
 }
