@@ -1,0 +1,41 @@
+.backdrop {
+    @include size(100%, 100%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity $mainTransition, visibility $mainTransition;
+
+    overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .mob-menu {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.mob-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    scale: 1;
+
+    width: 400px;
+    height: 796px;
+
+    color: red;
+
+    background-color: teal;
+
+    transition: transform $mainTransition;
+}

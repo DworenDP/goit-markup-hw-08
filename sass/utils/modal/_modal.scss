@@ -9,6 +9,8 @@
 
     opacity: 1;
     transition: opacity $mainTransition, visibility $mainTransition;
+
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -29,7 +31,6 @@
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
         scale: 1;
-        z-index: 99;
 
         width: 95%;
         height: 600px;
