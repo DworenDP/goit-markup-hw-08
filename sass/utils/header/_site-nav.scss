@@ -1,12 +1,16 @@
 .navigation {
-    position: relative;
-    &__box {
-        display: none;
+    @include base {
+        display: flex;
+        align-items: baseline;
+
+        &__box {
+            display: none;
+        }
     }
 
     @include tablet {
-        display: flex;
         align-items: center;
+        justify-content: flex-start;
 
         &__box {
             display: flex;
@@ -32,6 +36,29 @@
 
             font-weight: 500;
         }
+    }
+}
+
+.navigation__mob-menu-btn {
+    @include base {
+        display: block;
+
+        padding: 23px 22px;
+        margin-left: 68px;
+
+        border: none;
+
+        cursor: pointer;
+
+        background-color: $secondLogoColor;
+    }
+
+    @include mobile {
+        margin-left: 258px;
+    }
+
+    @include tablet {
+        display: none;
     }
 }
 
