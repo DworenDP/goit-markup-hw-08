@@ -661,6 +661,7 @@ textarea {
   width: 100vw;
   height: 100vh;
   padding: 40px;
+  z-index: 999;
   background-color: #ffffff;
   overflow-y: scroll;
   -webkit-transform: translateX(100%);
