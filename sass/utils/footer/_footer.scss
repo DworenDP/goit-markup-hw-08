@@ -209,6 +209,7 @@
 
     @include desktop {
         margin-left: auto;
+        margin-top: 0;
 
         &__list {
             align-items: flex-start;

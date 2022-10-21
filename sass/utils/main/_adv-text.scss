@@ -46,6 +46,10 @@
         &__list {
             flex-basis: calc(100% / 2 - 30px);
         }
+
+        &__title {
+            text-align: start;
+        }
     }
 
     @include desktop {
@@ -70,7 +74,7 @@
     }
 }
 
-@include desktop {
+@include base {
     .section--padding-bottom-0 {
         padding-bottom: 0;
     }
