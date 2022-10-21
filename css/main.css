@@ -1415,6 +1415,9 @@ textarea {
     margin-left: 8px;
     margin-bottom: 7px;
   }
+  .btn-box__item:nth-child(2n+1) {
+    margin-left: 0;
+  }
   .btn-box__button {
     font-size: 16px;
     line-height: 1.62;
@@ -1441,12 +1444,26 @@ textarea {
     border-radius: 4px;
   }
 }
+@media screen and (min-width: 480px) {
+  .btn-box__item + .btn-box__item {
+    margin-left: 8px;
+  }
+  .btn-box__item:nth-child(3) {
+    margin-right: 16px;
+  }
+  .btn-box__item:nth-child(4) {
+    margin-left: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .btn-box {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 50px;
+  }
+  .btn-box__item:nth-child(3) {
+    margin-right: 8px;
   }
 }
 
